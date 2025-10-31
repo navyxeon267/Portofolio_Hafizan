@@ -44,7 +44,7 @@ color: #38bdf8;
 }
 
 #hero {
-background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+background: linear-gradient(135deg, #38bdf8, black);
 color: white;
 text-align: center;
 padding: 100px 20px;
