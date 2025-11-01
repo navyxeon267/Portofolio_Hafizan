@@ -7,9 +7,24 @@ scroll-behavior: smooth;
 
 body {
 font-family: "Poppins", sans-serif;
-Background-color: #0f172a;
+Background-color: linear-gradient(-45deg, #000000, #0a1a3d);
+background-size: 200% 200%;
+animation: gradientFlow 8s ease infinate;
 Color: #e2e8f0;
 line-height: 1.6;
+overflow-x: hidden;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
@@ -20,6 +35,7 @@ justify-content: space-between;
 align-items: center;
 position: sticky;
 top: 0;
+z-index:1000;
 }
 
 nav h1 {
@@ -48,6 +64,7 @@ background: linear-gradient(135deg, #38bdf8, black);
 color: white;
 text-align: center;
 padding: 100px 20px;
+animation: fadeIn 1.5s ease-in;
 }
 
 #hero h2 {
@@ -93,11 +110,14 @@ gap: 20px;
 background: #1e293b;
 border-radius: 12px;
 padding: 20px;
-transition: 0.3s;
+transition: 0.4s;
+opacity:0;
+transfrom: translateY(30px);
+animation: slideUp 1s forwards
 }
 
 .card:hover {
-transform: translateY(-5px);
+transform: translateY(-5px) scale(1.02);
 background: #334155;
 }
 
@@ -107,4 +127,30 @@ text-align: center;
 padding: 20px;
 margin-top: 40px;
 color: #94a3b8;
+}
+
+@keyframes fadeIn {
+  from { opacity:o;}
+  to { opacity:1;}
+}
+
+@keyframes slideUp {
+  from{opacity:0;}
+  to { opacity:1;}
+}
+
+.fade-in {
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1.2s ease forwards;
+}
+
+.fade-dowm {
+  animation: fadeIn 1.2s ease-out, slideUp 1.2s ease-out;
+}
+
+.hover-up {
+  transition: all 0.3s ease;
 }
