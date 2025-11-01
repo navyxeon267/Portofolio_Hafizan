@@ -121,6 +121,8 @@ footer {
   padding: 20px;
   margin-top: 40px;
   color: #94a3b8;
+  position: relative;
+  z-index: 10;
 }
 
 @keyframes fadeIn {
