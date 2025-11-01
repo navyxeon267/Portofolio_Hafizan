@@ -12,6 +12,8 @@ background-size: 200% 200%;
 animation: gradientFlow 8s ease infinate;
 Color: #e2e8f0;
 line-height: 1.6;
+margin:0;
+padding:0;
 overflow-x: hidden;
 }
 
@@ -110,15 +112,20 @@ gap: 20px;
 background: #1e293b;
 border-radius: 12px;
 padding: 20px;
-transition: 0.4s;
+transition:transfrom 0.3s ease, box-shadow 0.3s ease;
 opacity:0;
 transfrom: translateY(30px);
 animation: slideUp 1s forwards
+overflow: hidden;
+position: relative;
+z-index:1;
 }
 
 .card:hover {
-transform: translateY(-5px) scale(1.02);
+transform: translateY(-5px) scale(1.03);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 background: #334155;
+z-index:5;
 }
 
 footer {
@@ -153,4 +160,9 @@ color: #94a3b8;
 
 .hover-up {
   transition: all 0.3s ease;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
 }
